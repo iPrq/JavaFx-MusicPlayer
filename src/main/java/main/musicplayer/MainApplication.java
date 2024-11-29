@@ -19,6 +19,7 @@ public class MainApplication extends Application {
         stage.initStyle(StageStyle.TRANSPARENT);
         stage.setResizable(false);
         stage.setScene(scene);
+        ((MainAppController)fxmlLoader.getController()).init(stage);
         stage.show();
     }
 

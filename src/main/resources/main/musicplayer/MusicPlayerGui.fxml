@@ -7,17 +7,18 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" stylesheets="@MainStyleSheet.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.musicplayer.MainAppController">
    <children>
-      <Pane layoutX="-1.0" layoutY="-2.0" prefHeight="33.0" prefWidth="701.0" styleClass="tilePane" stylesheets="@MainStyleSheet.css">
+      <Pane fx:id="titlePane" layoutX="-1.0" layoutY="-2.0" prefHeight="33.0" prefWidth="701.0" styleClass="tilePane" stylesheets="@MainStyleSheet.css">
          <children>
-            <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="669.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="close" fitHeight="22.0" fitWidth="22.0" layoutX="669.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" styleClass="obuttons">
                <image>
                   <Image url="@../../images/close.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="645.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="minimise" fitHeight="22.0" fitWidth="22.0" layoutX="645.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" styleClass="obuttons">
                <image>
                   <Image url="@../../images/minimize.png" />
                </image>
@@ -28,28 +29,28 @@
          <children>
             <Pane layoutY="286.0" prefHeight="90.0" prefWidth="700.0" styleClass="funcPane" stylesheets="@MainStyleSheet.css">
                <children>
-                  <ProgressBar layoutX="210.0" layoutY="19.0" prefHeight="5.0" prefWidth="292.0" progress="0.0" />
-                  <Pane layoutX="339.0" layoutY="36.0" prefHeight="35.0" prefWidth="35.0" styleClass="buttons" stylesheets="@MainStyleSheet.css">
+                  <ProgressBar fx:id="songProgressBar" layoutX="210.0" layoutY="19.0" prefHeight="5.0" prefWidth="292.0" progress="0.0" />
+                  <Pane layoutX="339.0" layoutY="36.0" onMouseClicked="#playBtn" prefHeight="35.0" prefWidth="35.0" styleClass="buttons" stylesheets="@MainStyleSheet.css">
                      <children>
-                        <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" styleClass="obuttons">
                            <image>
                               <Image url="@../../images/playIcon.png" />
                            </image>
                         </ImageView>
                      </children>
                   </Pane>
-                  <Pane layoutX="383.0" layoutY="36.0" prefHeight="35.0" prefWidth="35.0" styleClass="buttons" stylesheets="@MainStyleSheet.css">
+                  <Pane layoutX="383.0" layoutY="36.0" onMouseClicked="#prevBtn" prefHeight="35.0" prefWidth="35.0" styleClass="buttons" stylesheets="@MainStyleSheet.css">
                      <children>
-                        <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" styleClass="obuttons">
                            <image>
                               <Image url="@../../images/foward.png" />
                            </image>
                         </ImageView>
                      </children>
                   </Pane>
-                  <Pane layoutX="292.0" layoutY="36.0" prefHeight="35.0" prefWidth="35.0" styleClass="buttons" stylesheets="@MainStyleSheet.css">
+                  <Pane layoutX="292.0" layoutY="36.0" onMouseClicked="#prevBtn" prefHeight="35.0" prefWidth="35.0" styleClass="buttons" stylesheets="@MainStyleSheet.css">
                      <children>
-                        <ImageView fitHeight="36.0" fitWidth="36.0" layoutX="-1.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="36.0" fitWidth="36.0" layoutX="-1.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true" styleClass="obuttons">
                            <image>
                               <Image url="@../../images/back.png" />
                            </image>
@@ -58,12 +59,28 @@
                   </Pane>
                   <Pane layoutX="557.0" layoutY="15.0" prefHeight="60.0" prefWidth="129.0" styleClass="highlight">
                      <children>
-                        <Label alignment="CENTER" layoutX="30.0" layoutY="7.0" prefHeight="17.0" prefWidth="67.0" text="Volume" textAlignment="JUSTIFY" textFill="#fffefe" />
-                        <Slider layoutX="6.0" layoutY="33.0" prefHeight="2.0" prefWidth="120.0" />
+                        <Label alignment="CENTER" layoutX="30.0" layoutY="7.0" prefHeight="17.0" prefWidth="67.0" text="Volume" textAlignment="JUSTIFY" textFill="#fffefe">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Label>
+                        <Slider fx:id="songVolumeSlider" layoutX="6.0" layoutY="33.0" prefHeight="2.0" prefWidth="120.0" />
                      </children>
                   </Pane>
                </children></Pane>
-            <Pane layoutX="123.0" layoutY="55.0" prefHeight="200.0" prefWidth="451.0" styleClass="highlight" stylesheets="@MainStyleSheet.css" />
+            <Pane layoutX="123.0" layoutY="55.0" prefHeight="200.0" prefWidth="451.0" styleClass="highlight" stylesheets="@MainStyleSheet.css">
+               <children>
+                  <ImageView fx:id="songIcon" fitHeight="160.0" fitWidth="166.0" layoutX="14.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label alignment="CENTER" layoutX="209.0" layoutY="26.0" prefHeight="35.0" prefWidth="222.0" text="Currently Playing">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="songNamelbl" alignment="CENTER" layoutX="201.0" layoutY="79.0" prefHeight="36.0" prefWidth="235.0" text="Nothing! :(">
+                     <font>
+                        <Font name="System Italic" size="20.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
          </children>
       </Pane>
    </children>
