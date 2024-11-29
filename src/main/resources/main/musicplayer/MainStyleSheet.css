@@ -1,3 +1,7 @@
+.root {
+    -fx-background-color: #212016;
+    -fx-background-radius: 22;
+}
 .tilePane {
     -fx-background-color: #212016;
     -fx-background-radius: 22 22 0 0;
