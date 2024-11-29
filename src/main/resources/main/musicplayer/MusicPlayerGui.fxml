@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" stylesheets="@MainStyleSheet.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.musicplayer.MainAppController">
+   <children>
+      <Pane layoutX="-1.0" layoutY="-2.0" prefHeight="33.0" prefWidth="701.0" styleClass="tilePane" stylesheets="@MainStyleSheet.css">
+         <children>
+            <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="669.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/close.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="645.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/minimize.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="35.0" layoutY="6.0" prefHeight="22.0" prefWidth="67.0" text="Music Player" textFill="WHITE" />
+         </children></Pane>
+      <Pane layoutY="28.0" prefHeight="375.0" prefWidth="700.0" styleClass="MainPane" stylesheets="@MainStyleSheet.css">
+         <children>
+            <Pane layoutY="286.0" prefHeight="90.0" prefWidth="700.0" styleClass="funcPane" stylesheets="@MainStyleSheet.css">
+               <children>
+                  <ProgressBar layoutX="210.0" layoutY="17.0" prefHeight="13.0" prefWidth="292.0" progress="0.0" />
+                  <Pane layoutX="339.0" layoutY="36.0" prefHeight="35.0" prefWidth="35.0" styleClass="buttons" stylesheets="@MainStyleSheet.css">
+                     <children>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/playIcon.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="383.0" layoutY="36.0" prefHeight="35.0" prefWidth="35.0" styleClass="buttons" stylesheets="@MainStyleSheet.css">
+                     <children>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/foward.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="292.0" layoutY="36.0" prefHeight="35.0" prefWidth="35.0" styleClass="buttons" stylesheets="@MainStyleSheet.css">
+                     <children>
+                        <ImageView fitHeight="36.0" fitWidth="36.0" layoutX="-1.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/back.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </children></Pane>
+            <Pane layoutX="123.0" layoutY="67.0" prefHeight="200.0" prefWidth="451.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

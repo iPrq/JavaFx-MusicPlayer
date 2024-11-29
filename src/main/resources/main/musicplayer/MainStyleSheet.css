@@ -1,0 +1,20 @@
+.tilePane {
+    -fx-background-color: #212016;
+    -fx-background-radius: 22 22 0 0;
+}
+
+.buttons{
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 22;
+    -fx-cursor: hand;
+}
+
+.MainPane{
+    -fx-background-color: linear-gradient(to right, #505a74, #9a9498);
+    -fx-background-radius: 0 0 14 14;
+}
+
+.funcPane{
+    -fx-background-color: #212016;
+    -fx-background-radius: 0 0 14 14;
+}
