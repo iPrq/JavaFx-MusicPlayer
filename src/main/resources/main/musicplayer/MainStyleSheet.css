@@ -18,3 +18,7 @@
     -fx-background-color: #212016;
     -fx-background-radius: 0 0 14 14;
 }
+.highlight{
+    -fx-background-color: #00000025;
+    -fx-background-radius: 15;
+}
