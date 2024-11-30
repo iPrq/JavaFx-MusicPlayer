@@ -29,3 +29,7 @@
 .obuttons{
     -fx-cursor: hand;
 }
+.obuttons:hover {
+    -fx-background-color: #ffb347;
+    -fx-transition: background-color 0.3s;
+}

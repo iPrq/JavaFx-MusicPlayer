@@ -39,7 +39,7 @@
                         </ImageView>
                      </children>
                   </Pane>
-                  <Pane layoutX="383.0" layoutY="36.0" onMouseClicked="#prevBtn" prefHeight="35.0" prefWidth="35.0" styleClass="buttons" stylesheets="@MainStyleSheet.css">
+                  <Pane layoutX="383.0" layoutY="36.0" onMouseClicked="#nextBtn" prefHeight="35.0" prefWidth="35.0" styleClass="buttons" stylesheets="@MainStyleSheet.css">
                      <children>
                         <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" styleClass="obuttons">
                            <image>
