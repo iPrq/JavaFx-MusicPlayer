@@ -32,7 +32,12 @@
                <ProgressBar fx:id="songProgressBar" layoutX="212.0" layoutY="13.0" prefHeight="14.0" prefWidth="292.0" progress="0.0" styleClass="progressBar" />
                <Pane layoutX="339.0" layoutY="36.0" onMouseClicked="#playBtn" prefHeight="35.0" prefWidth="35.0" styleClass="buttons" stylesheets="@MainStyleSheet.css">
                   <children>
-                     <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" styleClass="obuttons">
+                     <ImageView fx:id="pauseIcon" fitHeight="35.0" fitWidth="35.0" onMouseClicked="#playBtn" pickOnBounds="true" preserveRatio="true" styleClass="obuttons">
+                        <image>
+                           <Image url="@../../images/pauseIcon.png" />
+                        </image>
+                     </ImageView>
+                     <ImageView fx:id="playIcon" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" styleClass="obuttons">
                         <image>
                            <Image url="@../../images/playIcon.png" />
                         </image>
